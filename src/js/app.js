@@ -14,10 +14,10 @@ export default class SortbyProps {
     ruleArr.map((key) => ruleArr[this.ruleSort.findIndex((el) => el === key[0])] = key);
     defaultRuleArr.sort((a, b) => a[0].localeCompare(b[0], ['en']));
     return ruleArr.concat(defaultRuleArr).map((el) => {
-      let map = new Map();
+      const map = new Map();
       map.set('key', el[0]);
       map.set('value', el[1]);
-      return Object.fromEntries(map)
+      return Object.fromEntries(map);
     });
   }
 }
@@ -27,8 +27,4 @@ const obj = {
 };
 const arr = ['name', 'level'];
 
-const sortbyProps = new SortbyProps(obj, arr);
-console.log(sortbyProps.sort());
-
-export {obj, arr};
-
+export { obj, arr };

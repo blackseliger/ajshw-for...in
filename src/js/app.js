@@ -1,6 +1,5 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-underscore-dangle */
-
 export default class SortbyProps {
   constructor(obj = {}, ruleSort = []) {
     this.obj = obj;
